@@ -9,8 +9,6 @@ byte digit[10]= {0x6F, 0x09, 0x73, 0x3B, 0x1D, 0x3E, 0x7C, 0x0B, 0x7F, 0x1F};
 int i;
 
 void setup(){
-  Serial.begin(9600);
-  
   pinMode(LATCH, OUTPUT);
   pinMode(CLK, OUTPUT);
   pinMode(DATA, OUTPUT);
@@ -20,7 +18,6 @@ void setup(){
 
 void loop(){
   for (i=1; i<=88; i++) {
-    Serial.print("i=" + String(i) + "\n");
     if (i<=25) delay(150);
     if ((i>25) && (i<=80)) delay(250);
     if ((i>80) && (i<=88)) delay(500);
